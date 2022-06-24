@@ -16,7 +16,7 @@ jobs:
       - id: get-project
         name: Get project name
         run: echo "::set-output name=PROJECT::$(cat project-to-build)"
-      - name: https://github.com/ABC/TVBoxOSC
+      - name: https://github.com/wudjk/TVBoxOSC
         run: git clone --depth=1 ${{ steps.get-project.outputs.PROJECT }} project
       - name: Build the app
         working-directory: ./project
